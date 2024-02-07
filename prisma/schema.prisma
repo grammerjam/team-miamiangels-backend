@@ -9,3 +9,32 @@ datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
 }
+
+model Media{
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  year      Int
+  category  String
+  rating    String
+  tpath     String
+  genre     Genre[]
+}
+
+model User{
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  username  String
+  password  String
+  email     String
+  role      String
+  bookmarkIds String[] @db.ObjectId
+  GenreInterest GenreInterest[]
+}
+
+type GenreInterest{
+  genre String
+  count Int
+}
+
+enum Genre{
+  Horror
+}
