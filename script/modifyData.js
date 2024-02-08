@@ -3,7 +3,7 @@ const filePath = './data.json';
 
 const categories = ["Movie", "TV Series"]
 const ratings = ["E", "PG", "18+"];
-const genres = ["Sci Fi", "Thriller", "Comedy", "Action", "Crime", "Romance", "Comedy", "War", "Horror"]
+const genres = ["SciFi", "Thriller", "Comedy", "Action", "Crime", "Romance", "Comedy", "War", "Horror"]
 
 function getRandomNumber(min, max, offset) {
     const randomNumber = Math.floor(Math.random() * (max - min + 1))
