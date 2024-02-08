@@ -38,7 +38,7 @@
     "rating": "PG",
     "genre": [
       "Romance",
-      "Sci Fi",
+      "SciFi",
       "Action"
     ]
   },
@@ -118,7 +118,7 @@
     "category": "Movie",
     "rating": "E",
     "genre": [
-      "Sci Fi",
+      "SciFi",
       "Comedy",
       "War"
     ]
@@ -136,7 +136,7 @@
     "category": "TV Series",
     "rating": "PG",
     "genre": [
-      "Sci Fi"
+      "SciFi"
     ]
   },
   {
@@ -206,7 +206,7 @@
     "genre": [
       "Romance",
       "War",
-      "Sci Fi"
+      "SciFi"
     ]
   },
   {
@@ -356,7 +356,7 @@
     "category": "Movie",
     "rating": "E",
     "genre": [
-      "Sci Fi",
+      "SciFi",
       "Crime",
       "War"
     ]
@@ -374,7 +374,7 @@
     "category": "TV Series",
     "rating": "PG",
     "genre": [
-      "Sci Fi",
+      "SciFi",
       "Horror",
       "Comedy"
     ]
@@ -495,7 +495,7 @@
     "genre": [
       "Comedy",
       "Action",
-      "Sci Fi"
+      "SciFi"
     ]
   },
   {
@@ -627,7 +627,7 @@
     "category": "E",
     "genre": [
       "Crime",
-      "Sci Fi"
+      "SciFi"
     ],
     "rating": "PG"
   },
@@ -688,7 +688,7 @@
     "year": 2015,
     "category": "PG",
     "genre": [
-      "Sci Fi"
+      "SciFi"
     ],
     "rating": "PG"
   },
@@ -702,7 +702,7 @@
     "year": 2023,
     "category": "PG",
     "genre": [
-      "Sci Fi"
+      "SciFi"
     ],
     "rating": "18+"
   },
@@ -717,7 +717,7 @@
     "category": "PG",
     "genre": [
       "Comedy",
-      "Sci Fi"
+      "SciFi"
     ],
     "rating": "18+"
   },
@@ -877,7 +877,7 @@
     "category": "PG",
     "genre": [
       "Romance",
-      "Sci Fi"
+      "SciFi"
     ],
     "rating": "PG"
   },
@@ -1015,7 +1015,7 @@
     "category": "PG",
     "genre": [
       "Comedy",
-      "Sci Fi"
+      "SciFi"
     ],
     "rating": "PG"
   }

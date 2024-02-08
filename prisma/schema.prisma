@@ -37,4 +37,11 @@ type GenreInterest{
 
 enum Genre{
   Horror
+  SciFi
+  Thriller 
+  Comedy
+  Action
+  Crime
+  Romance
+  War
 }
