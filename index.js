@@ -2,6 +2,7 @@ import express from 'express';
 import 'dotenv/config'
 import cors from 'cors';
 import { router as mediaRoute } from "./routes/mediaRoute.js"
+import { router as userRoute } from './routes/userRoute.js'
 
 const app = express()
 const PORT = process.env.PORT || 10000
@@ -15,6 +16,7 @@ app.get('/', (req, res) => {
 })
 
 app.use("/api/media", mediaRoute)
+app.use("/api/users", userRoute)
 
 app.listen(PORT, () => {
     console.log(`This server is running in port ${PORT}`)
