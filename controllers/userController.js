@@ -22,11 +22,12 @@ export async function getUserInfo(req, res) {
 }
 
 export async function createUser(req, res) {
-    const userEmail = req.query.userEmail
+    const newUserEmail = req.body.email
+    console.log(newUserEmail)
     try {
             await prisma.user.create({
                 data: {
-                    email: userEmail,
+                    email: newUserEmail,
                 }
             })
         res.status(201).send("User successfully created");
