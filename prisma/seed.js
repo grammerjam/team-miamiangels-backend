@@ -3,12 +3,12 @@ const prisma = new PrismaClient()
 
 async function main() {
     const beyondEarth = await prisma.media.create({
-        where: {id: "1"},
+        where: {},
         update: {},
         create: {
             title: 'Beyond Earth',
-            thumbnail: '/assets/thumbnails/beyond-earth/regular/large.jpg',
-            thumbnailTrending: '/assets/thumbnails/beyond-earth/trending/large.jpg',
+            tpath: '/assets/thumbnails/beyond-earth/regular/large.jpg',
+            tpathTrending: '/assets/thumbnails/beyond-earth/trending/large.jpg',
             year: 2019,
             category: 'Movie',
             rating: 'PG',
@@ -17,12 +17,12 @@ async function main() {
         }
     })
     const bottomGear = await prisma.media.create({
-        where: { id: "2"},
+        where: {},
         update: {},
         create: {
             title: 'Bottom Gear',
-            thumbnail: '/assets/thumbnails/bottom-gear/regular/large.jpg',
-            thumbnailTrending: '/assets/thumbnails/bottom-gear/trending/large.jpg',
+            tpath: '/assets/thumbnails/bottom-gear/regular/large.jpg',
+            tpathTrending: '/assets/thumbnails/bottom-gear/trending/large.jpg',
             year: 2021,
             category: 'TV Show',
             rating: 'PG',

@@ -11,23 +11,24 @@ datasource db {
 }
 
 model Media{
-  id        String @id @default(auto()) @map("_id") @db.ObjectId
-  title     String
-  year      Int
-  category  String
-  rating    String
-  tpath     String
-  genre     Genre[]
+  id                String @id @default(auto()) @map("_id") @db.ObjectId
+  title             String
+  year              Int
+  category          String
+  rating            String
+  tpath             String?
+  tpathTrending     String?
+  genre             Genre[]
 }
 
 model User{
-  id        String @id @default(auto()) @map("_id") @db.ObjectId
-  username  String
-  password  String
-  email     String
-  role      String
-  bookmarkIds String[] @db.ObjectId
-  GenreInterest GenreInterest[]
+  id                String @id @default(auto()) @map("_id") @db.ObjectId
+  username          String
+  password          String
+  email             String
+  role              String
+  bookmarkIds       String[] @db.ObjectId
+  GenreInterest     GenreInterest[]
 }
 
 type GenreInterest{
