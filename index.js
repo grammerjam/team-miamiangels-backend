@@ -10,7 +10,7 @@ app.use(cors())
 app.use(express.json())
 
 app.get('/', (req, res) => {
-    console.log('root folder reached')
+    console.log('root file reached')
     res.send('Hello World!')
 })
 
