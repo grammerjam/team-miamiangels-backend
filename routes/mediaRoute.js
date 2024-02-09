@@ -1,5 +1,5 @@
 import express from 'express';
-import getAllMedia from "../controllers/mediaController.js";
+import { getAllMedia, getAllMovies, getAllTVSeries } from "../controllers/mediaController.js";
 const router = express.Router()
 
 router
@@ -7,8 +7,12 @@ router
     .get(getAllMedia)
 // .post(emotionController.addEmotion);
 
-// router
-//     .route("/:id")
-//     .get(emotionController.getEmotion);
+router
+    .route("/movies")
+    .get(getAllMovies);
+
+router
+    .route("/tv-series")
+    .get(getAllTVSeries);
 
 export { router }
