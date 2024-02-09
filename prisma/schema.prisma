@@ -10,39 +10,45 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Media{
-  id                String @id @default(auto()) @map("_id") @db.ObjectId
-  title             String
-  year              Int
-  category          String
-  rating            String
-  tpath             String?
-  tpathTrending     String?
-  genre             Genre[]
+model Media {
+  id            String  @id @default(auto()) @map("_id") @db.ObjectId
+  title         String
+  year          Int
+  category      String
+  rating        String
+  tpath         String?
+  tpathTrending String?
+  genre         Genre[]
+  user          User[]
 }
 
-model User{
-  id                String @id @default(auto()) @map("_id") @db.ObjectId
-  username          String
-  password          String
-  email             String
-  role              String
-  bookmarkIds       String[] @db.ObjectId
-  GenreInterest     GenreInterest[]
+model User {
+  id            String          @id @default(auto()) @map("_id") @db.ObjectId
+  email         String          @unique
+  password      String
+  role          Role            @default(USER)
+  bookmarkId    Media           @relation(fields: [bookmarkIds], references: [id])
+  bookmarkIds   String[]        @db.ObjectId
+  genreInterest GenreInterest[]
 }
 
-type GenreInterest{
-  genre String
+type GenreInterest {
+  genre Genre
   count Int
 }
 
-enum Genre{
+enum Genre {
   Horror
   SciFi
-  Thriller 
+  Thriller
   Comedy
   Action
   Crime
   Romance
   War
+}
+
+enum Role {
+  USER
+  ADMIN
 }

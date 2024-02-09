@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "## PROJECTS",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,10 +20,12 @@
   "dependencies": {
     "@prisma/client": "^5.9.1",
     "express": "^4.18.2",
-    "nodemon": "^3.0.3",
-    "prisma": "^5.9.1"
+    "nodemon": "^3.0.3"
   },
   "prisma": {
-    "seed": "node ./prisma/seed.js"
+    "seed": "node prisma/seed.js"
+  },
+  "devDependencies": {
+    "prisma": "^5.9.1"
   }
 }
