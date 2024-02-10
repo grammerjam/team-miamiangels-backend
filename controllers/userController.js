@@ -22,15 +22,27 @@ export async function getUserInfo(req, res) {
 }
 
 export async function createUser(req, res) {
+    // console.log("this is the body" + req.body)
     const newUserEmail = req.body.email
-    console.log(newUserEmail)
+    // console.log("this is the email" + newUserEmail)
     try {
+        const newUser = await prisma.user.findUnique({
+            where: {
+                email: newUserEmail
+            }
+        })
+        // console.log("user information" + newUser)
+        if (!newUser) {
             await prisma.user.create({
                 data: {
                     email: newUserEmail,
                 }
             })
-        res.status(201).send("User successfully created");
+            res.status(201).send("User successfully created");
+            // console.log(res)
+        } else {
+            res.status(202).send("User already exists")
+        }
     } catch (e) {
         console.error(e);
         res.status(500).send('An error occurred while fetching media records.');
