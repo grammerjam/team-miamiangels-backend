@@ -81,15 +81,29 @@ export async function updateUserBookmarks(req, res) {
 }
 
 export async function getUserBookmarks(req, res) {
-    const userEmail = req.query.userEmail
+    const userEmail = req.query.email
     try {
         const user = await prisma.user.findFirst({
             where: {
                 email: userEmail
             },
         })
+        if (!user) {
+            return res.status(404).send("Could not find user")
+        }
         const userBookmarks = user.bookmarkIds
-        res.status(200).send(userBookmarks)
+        const bookmarkedMediaListPromises = userBookmarks.map(async (mediaId) => {
+            let foundMedia = await prisma.media.findFirst({
+                where: {
+                    id: mediaId
+                }
+            })
+            // console.log(foundMedia)
+            return foundMedia
+        })
+        const bookmarkedMediaList = await Promise.all(bookmarkedMediaListPromises);
+        console.log(bookmarkedMediaList); // This will now log the actual media records
+        res.json(bookmarkedMediaList);
     } catch (e) {
         console.error(e);
         res.status(500).send('An error occurred while fetching media records.');
