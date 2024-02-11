@@ -71,7 +71,7 @@ export async function updateUserBookmarks(req, res) {
                 bookmarkIds: userBookmarks
             }
         })
-        res.status(200).send("Bookmarks updated successfully")
+        res.status(200).json("Bookmarks updated successfully")
     } catch (e) {
         console.error(e);
         res.status(500).send('An error occurred while fetching media records.');
@@ -102,7 +102,6 @@ export async function getUserBookmarks(req, res) {
             return foundMedia
         })
         const bookmarkedMediaList = await Promise.all(bookmarkedMediaListPromises);
-        console.log(bookmarkedMediaList); // This will now log the actual media records
         res.json(bookmarkedMediaList);
     } catch (e) {
         console.error(e);
