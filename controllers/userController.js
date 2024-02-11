@@ -10,12 +10,12 @@ export async function getUserInfo(req, res) {
             }
         })
         if (!user) {
-            res.status(404).send("No such user found")
+            res.status(404).json("No such user found")
         }
         res.json(user);
     } catch (e) {
         console.error(e);
-        res.status(500).send('An error occurred while fetching media records.');
+        res.status(500).json('An error occurred while fetching media records.');
     } finally {
         await prisma.$disconnect();
     }
@@ -35,13 +35,13 @@ export async function createUser(req, res) {
                     email: newUserEmail,
                 }
             })
-            res.status(201).send("User successfully created");
+            res.status(201).json("User successfully created");
         } else {
-            res.status(202).send("User already exists")
+            res.status(202).json("User already exists")
         }
     } catch (e) {
         console.error(e);
-        res.status(500).send('An error occurred while fetching media records.');
+        res.status(500).json('An error occurred while fetching media records.');
     } finally {
         await prisma.$disconnect();
     }
@@ -74,7 +74,7 @@ export async function updateUserBookmarks(req, res) {
         res.status(200).json("Bookmarks updated successfully")
     } catch (e) {
         console.error(e);
-        res.status(500).send('An error occurred while fetching media records.');
+        res.status(500).json('An error occurred while fetching media records.');
     } finally {
         await prisma.$disconnect();
     }
@@ -89,7 +89,7 @@ export async function getUserBookmarks(req, res) {
             },
         })
         if (!user) {
-            return res.status(404).send("Could not find user")
+            return res.status(404).json("Could not find user")
         }
         const userBookmarks = user.bookmarkIds
         const bookmarkedMediaListPromises = userBookmarks.map(async (mediaId) => {
@@ -105,7 +105,7 @@ export async function getUserBookmarks(req, res) {
         res.json(bookmarkedMediaList);
     } catch (e) {
         console.error(e);
-        res.status(500).send('An error occurred while fetching media records.');
+        res.status(500).json('An error occurred while fetching media records.');
     } finally {
         await prisma.$disconnect();
     }
