@@ -1,7 +1,7 @@
 const fs = require('fs');
 const filePath = './data.json';
 
-const categories = ["Movie", "TV Series"]
+const categories = ["Movie", "TvSeries"]
 const ratings = ["E", "PG", "18+"];
 const genres = ["SciFi", "Thriller", "Comedy", "Action", "Crime", "Romance", "Comedy", "War", "Horror"]
 
@@ -24,11 +24,11 @@ fs.readFile(filePath, 'utf8', (err, data) => {
         if (!movie.year) {
             movie.year = getRandomNumber(2000, 2024, 2000)
         }
-        if (!movie.category) {
+        if (movie.category || !movie.category) {
             const randomNumber = getRandomNumber(0, 1, 0)
             movie.category = categories[randomNumber]
         }
-        if (!movie.rating) {
+        if (movie.rating) {
             const randomNumber = getRandomNumber(0, 2, 0)
             movie.rating = ratings[randomNumber]
         }

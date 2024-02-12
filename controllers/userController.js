@@ -80,6 +80,39 @@ export async function updateUserBookmarks(req, res) {
     }
 }
 
+export async function updateUserBookmarks2(req, res) {
+    /*json looks like
+    body :{
+        email: email@gmail.com
+        bookmarks: {
+            movies: String[]
+            tv-shows: String[]
+        }
+    }
+    */
+    const userEmail = req.body.email
+    const userBookmarks = req.body.bookmarks
+    try {
+        const user = await prisma.user.update({
+            where: {
+                email: userEmail
+            },
+            data: {
+                bookmarks: userBookmarks
+            }
+        })
+        if (!user) {
+            res.status(404).json("No user found")
+        }
+        res.status(200).json("Bookmarks updated successfully")
+    } catch (e) {
+        console.error(e);
+        res.status(500).json('An error occurred while fetching media records.');
+    } finally {
+        await prisma.$disconnect();
+    }
+}
+
 export async function getUserBookmarks(req, res) {
     const userEmail = req.query.email
     try {

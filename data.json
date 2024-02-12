@@ -13,11 +13,11 @@
       }
     },
     "year": 2019,
-    "category": "Movie",
-    "rating": "PG",
+    "category": "TvSeries",
+    "rating": "18+",
     "genre": [
-      "Comedy",
-      "Thriller"
+      "Crime",
+      "Comedy"
     ]
   },
   {
@@ -37,9 +37,9 @@
     "category": "Movie",
     "rating": "PG",
     "genre": [
-      "Romance",
+      "Action",
       "SciFi",
-      "Action"
+      "Comedy"
     ]
   },
   {
@@ -56,10 +56,11 @@
       }
     },
     "year": 2019,
-    "category": "TV Series",
-    "rating": "E",
+    "category": "Movie",
+    "rating": "18+",
     "genre": [
-      "Thriller",
+      "SciFi",
+      "Comedy",
       "Crime"
     ]
   },
@@ -80,7 +81,6 @@
     "category": "Movie",
     "rating": "18+",
     "genre": [
-      "Romance",
       "Comedy"
     ]
   },
@@ -98,11 +98,10 @@
       }
     },
     "year": 2018,
-    "category": "TV Series",
-    "rating": "PG",
+    "category": "Movie",
+    "rating": "18+",
     "genre": [
-      "Action",
-      "War"
+      "SciFi"
     ]
   },
   {
@@ -118,9 +117,7 @@
     "category": "Movie",
     "rating": "E",
     "genre": [
-      "SciFi",
-      "Comedy",
-      "War"
+      "SciFi"
     ]
   },
   {
@@ -133,10 +130,12 @@
       }
     },
     "year": 2019,
-    "category": "TV Series",
+    "category": "TvSeries",
     "rating": "PG",
     "genre": [
-      "SciFi"
+      "SciFi",
+      "Comedy",
+      "Thriller"
     ]
   },
   {
@@ -153,8 +152,7 @@
     "rating": "18+",
     "genre": [
       "War",
-      "Comedy",
-      "Thriller"
+      "SciFi"
     ]
   },
   {
@@ -167,11 +165,10 @@
       }
     },
     "year": 2019,
-    "category": "Movie",
+    "category": "TvSeries",
     "rating": "E",
     "genre": [
-      "War",
-      "Comedy"
+      "Horror"
     ]
   },
   {
@@ -184,11 +181,12 @@
       }
     },
     "year": 2016,
-    "category": "TV Series",
+    "category": "Movie",
     "rating": "PG",
     "genre": [
-      "War",
-      "Romance"
+      "Action",
+      "Crime",
+      "SciFi"
     ]
   },
   {
@@ -201,12 +199,10 @@
       }
     },
     "year": 2016,
-    "category": "TV Series",
+    "category": "TvSeries",
     "rating": "18+",
     "genre": [
-      "Romance",
-      "War",
-      "SciFi"
+      "Comedy"
     ]
   },
   {
@@ -219,10 +215,12 @@
       }
     },
     "year": 2017,
-    "category": "Movie",
+    "category": "TvSeries",
     "rating": "E",
     "genre": [
-      "Thriller"
+      "SciFi",
+      "Comedy",
+      "Horror"
     ]
   },
   {
@@ -235,10 +233,12 @@
       }
     },
     "year": 2016,
-    "category": "TV Series",
+    "category": "Movie",
     "rating": "PG",
     "genre": [
-      "Crime"
+      "Crime",
+      "Horror",
+      "Comedy"
     ]
   },
   {
@@ -251,11 +251,11 @@
       }
     },
     "year": 2015,
-    "category": "TV Series",
+    "category": "TvSeries",
     "rating": "E",
     "genre": [
       "Thriller",
-      "Crime"
+      "Romance"
     ]
   },
   {
@@ -268,11 +268,11 @@
       }
     },
     "year": 2017,
-    "category": "Movie",
-    "rating": "PG",
+    "category": "TvSeries",
+    "rating": "E",
     "genre": [
-      "Horror",
       "Action",
+      "Comedy",
       "Thriller"
     ]
   },
@@ -286,11 +286,10 @@
       }
     },
     "year": 2018,
-    "category": "TV Series",
-    "rating": "18+",
+    "category": "TvSeries",
+    "rating": "PG",
     "genre": [
-      "Horror",
-      "Comedy"
+      "Action"
     ]
   },
   {
@@ -303,11 +302,11 @@
       }
     },
     "year": 2015,
-    "category": "Movie",
+    "category": "TvSeries",
     "rating": "PG",
     "genre": [
       "Romance",
-      "Crime"
+      "Thriller"
     ]
   },
   {
@@ -321,9 +320,9 @@
     },
     "year": 2021,
     "category": "Movie",
-    "rating": "PG",
+    "rating": "E",
     "genre": [
-      "Action"
+      "Crime"
     ]
   },
   {
@@ -337,10 +336,10 @@
     },
     "year": 2017,
     "category": "Movie",
-    "rating": "18+",
+    "rating": "PG",
     "genre": [
       "Comedy",
-      "Crime"
+      "Romance"
     ]
   },
   {
@@ -353,12 +352,11 @@
       }
     },
     "year": 2017,
-    "category": "Movie",
+    "category": "TvSeries",
     "rating": "E",
     "genre": [
-      "SciFi",
-      "Crime",
-      "War"
+      "Thriller",
+      "Romance"
     ]
   },
   {
@@ -371,11 +369,9 @@
       }
     },
     "year": 2013,
-    "category": "TV Series",
-    "rating": "PG",
+    "category": "Movie",
+    "rating": "18+",
     "genre": [
-      "SciFi",
-      "Horror",
       "Comedy"
     ]
   },
@@ -389,11 +385,12 @@
       }
     },
     "year": 2017,
-    "category": "Movie",
-    "rating": "E",
+    "category": "TvSeries",
+    "rating": "PG",
     "genre": [
-      "Crime",
-      "Comedy"
+      "Action",
+      "Horror",
+      "SciFi"
     ]
   },
   {
@@ -406,11 +403,11 @@
       }
     },
     "year": 2018,
-    "category": "TV Series",
-    "rating": "PG",
+    "category": "TvSeries",
+    "rating": "E",
     "genre": [
-      "Crime",
-      "Action"
+      "Comedy",
+      "Romance"
     ]
   },
   {
@@ -423,10 +420,11 @@
       }
     },
     "year": 2016,
-    "category": "TV Series",
-    "rating": "E",
+    "category": "Movie",
+    "rating": "18+",
     "genre": [
-      "Crime"
+      "Comedy",
+      "SciFi"
     ]
   },
   {
@@ -439,12 +437,12 @@
       }
     },
     "year": 2020,
-    "category": "TV Series",
+    "category": "Movie",
     "rating": "PG",
     "genre": [
-      "War",
-      "Crime",
-      "Comedy"
+      "Romance",
+      "Comedy",
+      "Crime"
     ]
   },
   {
@@ -457,10 +455,10 @@
       }
     },
     "year": 2016,
-    "category": "TV Series",
-    "rating": "PG",
+    "category": "Movie",
+    "rating": "E",
     "genre": [
-      "Crime"
+      "Thriller"
     ]
   },
   {
@@ -477,7 +475,8 @@
     "rating": "18+",
     "genre": [
       "Comedy",
-      "Action"
+      "War",
+      "Thriller"
     ]
   },
   {
@@ -490,12 +489,11 @@
       }
     },
     "year": 2018,
-    "category": "TV Series",
-    "rating": "18+",
+    "category": "Movie",
+    "rating": "E",
     "genre": [
-      "Comedy",
-      "Action",
-      "SciFi"
+      "Thriller",
+      "Action"
     ]
   },
   {
@@ -509,8 +507,10 @@
     },
     "year": 2017,
     "category": "Movie",
-    "rating": "PG",
+    "rating": "E",
     "genre": [
+      "Crime",
+      "Romance",
       "War"
     ]
   },
@@ -522,11 +522,12 @@
       }
     },
     "year": 2002,
-    "category": "18+",
+    "category": "TvSeries",
     "genre": [
-      "War"
+      "Horror",
+      "Action"
     ],
-    "rating": "E"
+    "rating": "18+"
   },
   {
     "title": "A Flash Of The Past",
@@ -536,12 +537,11 @@
       }
     },
     "year": 2011,
-    "category": "18+",
+    "category": "Movie",
     "genre": [
-      "Action",
-      "Romance"
+      "Horror"
     ],
-    "rating": "E"
+    "rating": "18+"
   },
   {
     "title": "A Forbidden Tale",
@@ -551,12 +551,13 @@
       }
     },
     "year": 2006,
-    "category": "E",
+    "category": "TvSeries",
     "genre": [
-      "Comedy",
-      "Thriller"
+      "SciFi",
+      "Action",
+      "Romance"
     ],
-    "rating": "18+"
+    "rating": "PG"
   },
   {
     "title": "A New Prairie",
@@ -566,10 +567,10 @@
       }
     },
     "year": 2011,
-    "category": "PG",
+    "category": "Movie",
     "genre": [
-      "Comedy",
-      "Horror"
+      "Romance",
+      "Comedy"
     ],
     "rating": "E"
   },
@@ -581,11 +582,13 @@
       }
     },
     "year": 2017,
-    "category": "18+",
+    "category": "TvSeries",
     "genre": [
+      "War",
+      "Crime",
       "Romance"
     ],
-    "rating": "E"
+    "rating": "PG"
   },
   {
     "title": "Arch Duke",
@@ -595,12 +598,12 @@
       }
     },
     "year": 2019,
-    "category": "PG",
+    "category": "TvSeries",
     "genre": [
-      "Action",
-      "Crime"
+      "Comedy",
+      "Romance"
     ],
-    "rating": "E"
+    "rating": "PG"
   },
   {
     "title": "Artificial",
@@ -610,11 +613,11 @@
       }
     },
     "year": 2018,
-    "category": "PG",
+    "category": "TvSeries",
     "genre": [
-      "Thriller"
+      "Comedy"
     ],
-    "rating": "E"
+    "rating": "18+"
   },
   {
     "title": "Augmented Life",
@@ -624,12 +627,12 @@
       }
     },
     "year": 2013,
-    "category": "E",
+    "category": "TvSeries",
     "genre": [
-      "Crime",
-      "SciFi"
+      "Comedy",
+      "Crime"
     ],
-    "rating": "PG"
+    "rating": "E"
   },
   {
     "title": "Divergent",
@@ -639,13 +642,11 @@
       }
     },
     "year": 2018,
-    "category": "E",
+    "category": "TvSeries",
     "genre": [
-      "Comedy",
-      "Horror",
-      "Action"
+      "Romance"
     ],
-    "rating": "E"
+    "rating": "PG"
   },
   {
     "title": "Good Hunting",
@@ -655,12 +656,11 @@
       }
     },
     "year": 2004,
-    "category": "E",
+    "category": "Movie",
     "genre": [
-      "War",
-      "Action"
+      "Romance"
     ],
-    "rating": "PG"
+    "rating": "E"
   },
   {
     "title": "How To Be",
@@ -670,13 +670,11 @@
       }
     },
     "year": 2001,
-    "category": "18+",
+    "category": "TvSeries",
     "genre": [
-      "Crime",
-      "Horror",
-      "Comedy"
+      "SciFi"
     ],
-    "rating": "PG"
+    "rating": "E"
   },
   {
     "title": "Infected",
@@ -686,11 +684,12 @@
       }
     },
     "year": 2015,
-    "category": "PG",
+    "category": "Movie",
     "genre": [
-      "SciFi"
+      "Comedy",
+      "Romance"
     ],
-    "rating": "PG"
+    "rating": "E"
   },
   {
     "title": "Johnny",
@@ -700,11 +699,13 @@
       }
     },
     "year": 2023,
-    "category": "PG",
+    "category": "TvSeries",
     "genre": [
-      "SciFi"
+      "Comedy",
+      "Crime",
+      "Action"
     ],
-    "rating": "18+"
+    "rating": "PG"
   },
   {
     "title": "Journey Home",
@@ -714,10 +715,10 @@
       }
     },
     "year": 2015,
-    "category": "PG",
+    "category": "Movie",
     "genre": [
-      "Comedy",
-      "SciFi"
+      "Romance",
+      "Comedy"
     ],
     "rating": "18+"
   },
@@ -729,12 +730,12 @@
       }
     },
     "year": 2008,
-    "category": "E",
+    "category": "Movie",
     "genre": [
-      "Comedy",
-      "War"
+      "Crime",
+      "Horror"
     ],
-    "rating": "PG"
+    "rating": "E"
   },
   {
     "title": "Life After Chernobyl",
@@ -744,7 +745,7 @@
       }
     },
     "year": 2024,
-    "category": "E",
+    "category": "TvSeries",
     "genre": [
       "Crime"
     ],
@@ -758,12 +759,13 @@
       }
     },
     "year": 2007,
-    "category": "18+",
+    "category": "TvSeries",
     "genre": [
+      "Action",
       "War",
-      "Romance"
+      "Thriller"
     ],
-    "rating": "E"
+    "rating": "PG"
   },
   {
     "title": "Manmande Marvels",
@@ -773,11 +775,11 @@
       }
     },
     "year": 2003,
-    "category": "18+",
+    "category": "TvSeries",
     "genre": [
-      "War"
+      "Action"
     ],
-    "rating": "18+"
+    "rating": "E"
   },
   {
     "title": "Mecha Reckoning",
@@ -787,10 +789,11 @@
       }
     },
     "year": 2021,
-    "category": "E",
+    "category": "Movie",
     "genre": [
-      "Thriller",
-      "Comedy"
+      "SciFi",
+      "Comedy",
+      "Crime"
     ],
     "rating": "18+"
   },
@@ -802,11 +805,11 @@
       }
     },
     "year": 2014,
-    "category": "PG",
+    "category": "TvSeries",
     "genre": [
       "Horror"
     ],
-    "rating": "PG"
+    "rating": "18+"
   },
   {
     "title": "Money Puzzle",
@@ -816,13 +819,13 @@
       }
     },
     "year": 2019,
-    "category": "PG",
+    "category": "TvSeries",
     "genre": [
-      "War",
-      "Comedy",
-      "Horror"
+      "SciFi",
+      "Crime",
+      "Action"
     ],
-    "rating": "18+"
+    "rating": "E"
   },
   {
     "title": "Mother Earth",
@@ -832,11 +835,11 @@
       }
     },
     "year": 2024,
-    "category": "E",
+    "category": "Movie",
     "genre": [
-      "Comedy"
+      "War"
     ],
-    "rating": "PG"
+    "rating": "18+"
   },
   {
     "title": "No Way Home",
@@ -846,11 +849,13 @@
       }
     },
     "year": 2004,
-    "category": "18+",
+    "category": "TvSeries",
     "genre": [
-      "Thriller"
+      "Horror",
+      "Crime",
+      "Romance"
     ],
-    "rating": "18+"
+    "rating": "PG"
   },
   {
     "title": "Private Eye",
@@ -860,9 +865,11 @@
       }
     },
     "year": 2022,
-    "category": "18+",
+    "category": "Movie",
     "genre": [
-      "Comedy"
+      "Crime",
+      "Thriller",
+      "Romance"
     ],
     "rating": "E"
   },
@@ -874,10 +881,10 @@
       }
     },
     "year": 2017,
-    "category": "PG",
+    "category": "TvSeries",
     "genre": [
-      "Romance",
-      "SciFi"
+      "SciFi",
+      "Horror"
     ],
     "rating": "PG"
   },
@@ -889,11 +896,10 @@
       }
     },
     "year": 2003,
-    "category": "PG",
+    "category": "Movie",
     "genre": [
-      "Romance",
-      "War",
-      "Comedy"
+      "Comedy",
+      "Horror"
     ],
     "rating": "PG"
   },
@@ -905,13 +911,13 @@
       }
     },
     "year": 2015,
-    "category": "18+",
+    "category": "Movie",
     "genre": [
       "Comedy",
       "Crime",
       "Romance"
     ],
-    "rating": "PG"
+    "rating": "18+"
   },
   {
     "title": "The First Of Us",
@@ -921,10 +927,9 @@
       }
     },
     "year": 2005,
-    "category": "PG",
+    "category": "TvSeries",
     "genre": [
-      "Action",
-      "War"
+      "Comedy"
     ],
     "rating": "PG"
   },
@@ -936,13 +941,12 @@
       }
     },
     "year": 2001,
-    "category": "18+",
+    "category": "TvSeries",
     "genre": [
-      "Romance",
-      "Action",
-      "Thriller"
+      "Comedy",
+      "Crime"
     ],
-    "rating": "PG"
+    "rating": "18+"
   },
   {
     "title": "The Lost Age",
@@ -952,9 +956,10 @@
       }
     },
     "year": 2000,
-    "category": "E",
+    "category": "TvSeries",
     "genre": [
-      "Action"
+      "Horror",
+      "War"
     ],
     "rating": "E"
   },
@@ -966,13 +971,13 @@
       }
     },
     "year": 2014,
-    "category": "18+",
+    "category": "Movie",
     "genre": [
-      "Thriller",
-      "Action",
-      "Crime"
+      "Romance",
+      "Crime",
+      "SciFi"
     ],
-    "rating": "18+"
+    "rating": "PG"
   },
   {
     "title": "Until We Meet",
@@ -982,12 +987,12 @@
       }
     },
     "year": 2012,
-    "category": "E",
+    "category": "TvSeries",
     "genre": [
-      "Comedy",
-      "Horror"
+      "Horror",
+      "War"
     ],
-    "rating": "PG"
+    "rating": "E"
   },
   {
     "title": "Vice Tour",
@@ -997,10 +1002,11 @@
       }
     },
     "year": 2020,
-    "category": "PG",
+    "category": "TvSeries",
     "genre": [
-      "Comedy",
-      "Romance"
+      "Thriller",
+      "War",
+      "SciFi"
     ],
     "rating": "PG"
   },
@@ -1012,11 +1018,10 @@
       }
     },
     "year": 2010,
-    "category": "PG",
+    "category": "Movie",
     "genre": [
-      "Comedy",
-      "SciFi"
+      "War"
     ],
-    "rating": "PG"
+    "rating": "18+"
   }
 ]
