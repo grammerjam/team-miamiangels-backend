@@ -131,7 +131,7 @@ export async function getUserBookmarks(req, res) {
                     id: mediaId
                 }
             })
-            // console.log(foundMedia)
+            foundMedia.isBookmarked = true;
             return foundMedia
         })
         const bookmarkedMediaList = await Promise.all(bookmarkedMediaListPromises);
