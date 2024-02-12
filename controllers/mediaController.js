@@ -33,7 +33,7 @@ export async function getAllTVSeries(req, res) {
     try {
         const allTVSeries = await prisma.media.findMany({
             where: {
-                category: "TV Series"
+                category: "TVSeries"
             }
         });
         res.json(allTVSeries);
