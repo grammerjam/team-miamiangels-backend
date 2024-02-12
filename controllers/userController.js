@@ -126,7 +126,7 @@ export async function getUserBookmarks(req, res) {
         }
         const userBookmarks = user.bookmarkIds
         const bookmarkedMediaListPromises = userBookmarks.map(async (mediaId) => {
-            let foundMedia = await prisma.media.findFirst({
+            let foundMedia = await prisma.media.findUnique({
                 where: {
                     id: mediaId
                 }
