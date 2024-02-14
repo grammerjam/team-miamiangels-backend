@@ -81,15 +81,6 @@ export async function updateUserBookmarks(req, res) {
 }
 
 export async function updateUserBookmarks2(req, res) {
-    /*json looks like
-    body :{
-        email: email@gmail.com
-        bookmarks: {
-            movies: String[]
-            tv-shows: String[]
-        }
-    }
-    */
     const userEmail = req.body.email
     const userBookmarks = req.body.bookmarks
     try {
