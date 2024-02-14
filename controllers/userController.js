@@ -12,6 +12,7 @@ export async function getUserInfo(req, res) {
         if (!user) {
             res.status(404).json("No such user found")
         }
+        console.log(user)
         res.json(user);
     } catch (e) {
         console.error(e);
@@ -51,7 +52,7 @@ export async function updateUserBookmarks(req, res) {
     const userEmail = req.body.email
     const mediaId = req.body.mediaId
     try {
-        const user = await prisma.user.findFirst({
+        const user = await prisma.user.findUnique({
             where: {
                 email: userEmail
             },
@@ -107,11 +108,12 @@ export async function updateUserBookmarks2(req, res) {
 export async function getUserBookmarks(req, res) {
     const userEmail = req.query.email
     try {
-        const user = await prisma.user.findFirst({
+        const user = await prisma.user.findUnique({
             where: {
                 email: userEmail
             },
         })
+        console.log(user)
         if (!user) {
             return res.status(404).json("Could not find user")
         }
