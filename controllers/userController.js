@@ -113,7 +113,7 @@ export async function getUserBookmarks(req, res) {
                 email: userEmail
             },
         })
-        console.log(user)
+        // console.log(user)
         if (!user) {
             return res.status(404).json("Could not find user")
         }
