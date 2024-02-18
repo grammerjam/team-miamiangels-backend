@@ -34,6 +34,16 @@ export async function createUser(req, res) {
             await prisma.user.create({
                 data: {
                     email: newUserEmail,
+                    genreInterest: [
+                        { genre: "Horror", count: 0 },
+                        { genre: "Comedy", count: 0 },
+                        { genre: "Action", count: 0 },
+                        { genre: "Romance", count: 0 },
+                        { genre: "SciFi", count: 0 },
+                        { genre: "Thriller", count: 0 },
+                        { genre: "Crime", count: 0 },
+                        { genre: "War", count: 0 },
+                    ]
                 }
             })
             res.status(201).json("User successfully created");
@@ -81,29 +91,29 @@ export async function updateUserBookmarks(req, res) {
     }
 }
 
-export async function updateUserBookmarks2(req, res) {
-    const userEmail = req.body.email
-    const userBookmarks = req.body.bookmarks
-    try {
-        const user = await prisma.user.update({
-            where: {
-                email: userEmail
-            },
-            data: {
-                bookmarks: userBookmarks
-            }
-        })
-        if (!user) {
-            res.status(404).json("No user found")
-        }
-        res.status(200).json("Bookmarks updated successfully")
-    } catch (e) {
-        console.error(e);
-        res.status(500).json('An error occurred while fetching media records.');
-    } finally {
-        await prisma.$disconnect();
-    }
-}
+// export async function updateUserBookmarks2(req, res) {
+//     const userEmail = req.body.email
+//     const userBookmarks = req.body.bookmarks
+//     try {
+//         const user = await prisma.user.update({
+//             where: {
+//                 email: userEmail
+//             },
+//             data: {
+//                 bookmarks: userBookmarks
+//             }
+//         })
+//         if (!user) {
+//             res.status(404).json("No user found")
+//         }
+//         res.status(200).json("Bookmarks updated successfully")
+//     } catch (e) {
+//         console.error(e);
+//         res.status(500).json('An error occurred while fetching media records.');
+//     } finally {
+//         await prisma.$disconnect();
+//     }
+// }
 
 export async function getUserBookmarks(req, res) {
     const userEmail = req.query.email

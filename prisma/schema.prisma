@@ -32,19 +32,21 @@ model User {
   genreInterest GenreInterest[]
 }
 
-type GenreInterest {
-  genre Genre
-  count Int
+model GenreInterest {
+  genre  Genre   @id @map("_id")
+  count  Int
+  User   User?   @relation(fields: [userId], references: [id])
+  userId String? @db.ObjectId
 }
 
 enum Genre {
   Horror
-  SciFi
-  Thriller
   Comedy
   Action
-  Crime
   Romance
+  SciFi
+  Thriller
+  Crime
   War
 }
 
