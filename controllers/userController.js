@@ -136,3 +136,14 @@ export async function getUserBookmarks(req, res) {
         await prisma.$disconnect();
     }
 }
+
+
+export async function getUserTrending(req, res) {
+    return -1
+    // Get all media
+    // Get user bookmarks
+    // Content Filtering Matrix Algo
+    // Heapify Based Content Filtering
+    // Return Top 10
+
+}

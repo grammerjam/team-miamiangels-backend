@@ -13,4 +13,7 @@ router
     .put(updateUserBookmarks)
     .get(getUserBookmarks)
 
+router
+    .route('/trending')
+    // .get(getUserTrensding)
 export { router }
