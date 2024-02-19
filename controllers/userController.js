@@ -187,7 +187,6 @@ function scoreMedia (genreInterest, genres) {
 export async function getUserTrending(req, res) {
     const userEmail = req.query.email
     try{
-
         // Get all media
         const media = await prisma.media.findMany()
         
@@ -223,7 +222,6 @@ export async function getUserTrending(req, res) {
 
         // Return Top 10
         res.json(trendingMedia.slice(0, 10))
-        // res.json(trendingMedia)
     } catch (e) {
         console.error(e);
         res.status(500).json('An error occurred while fetching media records.');
