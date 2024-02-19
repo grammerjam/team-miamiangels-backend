@@ -34,6 +34,16 @@ export async function createUser(req, res) {
             await prisma.user.create({
                 data: {
                     email: newUserEmail,
+                    genreInterest: {
+                        Horror: 0,
+                        Comedy: 0,
+                        Action: 0,
+                        Romance: 0,
+                        SciFi: 0,
+                        Thriller: 0,
+                        Crime: 0,
+                        War: 0,
+                    }
                 }
             })
             res.status(201).json("User successfully created");

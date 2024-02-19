@@ -33,8 +33,14 @@ model User {
 }
 
 type GenreInterest {
-  genre Genre
-  count Int   @default(0)
+  Horror   Int @default(0)
+  Comedy   Int @default(0)
+  Action   Int @default(0)
+  Romance  Int @default(0)
+  SciFi    Int @default(0)
+  Thriller Int @default(0)
+  Crime    Int @default(0)
+  War      Int @default(0)
 }
 
 enum Genre {
