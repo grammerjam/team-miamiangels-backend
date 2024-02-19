@@ -221,7 +221,7 @@ export async function getUserTrending(req, res) {
         trendingMedia.sort(sortByScore)
 
         // Return Top 10
-        res.json(trendingMedia.slice(0, 7))
+        res.json(trendingMedia.slice(0, 10))
     } catch (e) {
         console.error(e);
         res.status(500).json('An error occurred while fetching media records.');
