@@ -92,26 +92,21 @@ export async function updateUserBookmarks(req, res) {
         const mediaGenre = media.genre
         const userGenreInterest = user.genreInterest
         const updateGenreInterest = mediaGenre.map(async (genre) => {
-            console.log(genre)
-            console.log(userEmail)
             await prisma.user.update({
                 where: {
                     email: userEmail
                 },
                 data: {
                     genreInterest: {
-                        set: {
-                            genre: genre,
-                            count: userGenreInterest[genre] ? userGenreInterest[genre] + 1 : 1
+                        update: {
+                            [genre]: {
+                                increment: 1
+                            }
                         }
                     }
                 }
             })
         })
-        await Promise.all(updateGenreInterest)
-
-        console.log(media)
-        console.log(user)
         res.status(200).json("Bookmarks updated successfully")
     } catch (e) {
         console.error(e);
@@ -180,7 +175,6 @@ export async function getUserBookmarks(req, res) {
 
 
 export async function getUserTrending(req, res) {
-    return -1
     // Get all media
     // Get user bookmarks
     // Content Filtering Matrix Algo
