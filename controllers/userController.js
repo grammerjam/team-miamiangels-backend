@@ -67,6 +67,11 @@ export async function updateUserBookmarks(req, res) {
                 email: userEmail
             },
         })
+        const media = await prisma.media.findUnique({
+            where: {
+                id: mediaId
+            },
+        })
         const userBookmarks = user.bookmarkIds
         let indexOfBookmark = userBookmarks.indexOf(mediaId)
         if (indexOfBookmark !== -1) {
@@ -79,9 +84,30 @@ export async function updateUserBookmarks(req, res) {
                 email: userEmail
             },
             data: {
-                bookmarkIds: userBookmarks
+                bookmarkIds: userBookmarks,
             }
         })
+        
+        const mediaGenre = media.genre
+        mediaGenre.forEach(async (genre) => {
+            await prisma.user.update({
+                where: {
+                    genreInterest:{
+                        equals:{
+                            genre: genre
+                        }
+                    } 
+                },
+                data: {
+                    count: {
+                        increment: 1
+                    }
+                }
+            })
+        })
+
+        console.log(media)
+        console.log(user)
         res.status(200).json("Bookmarks updated successfully")
     } catch (e) {
         console.error(e);
@@ -90,6 +116,7 @@ export async function updateUserBookmarks(req, res) {
         await prisma.$disconnect();
     }
 }
+
 
 // export async function updateUserBookmarks2(req, res) {
 //     const userEmail = req.body.email
