@@ -34,16 +34,6 @@ export async function createUser(req, res) {
             await prisma.user.create({
                 data: {
                     email: newUserEmail,
-                    genreInterest: [
-                        { genre: "Horror", count: 0 },
-                        { genre: "Comedy", count: 0 },
-                        { genre: "Action", count: 0 },
-                        { genre: "Romance", count: 0 },
-                        { genre: "SciFi", count: 0 },
-                        { genre: "Thriller", count: 0 },
-                        { genre: "Crime", count: 0 },
-                        { genre: "War", count: 0 },
-                    ]
                 }
             })
             res.status(201).json("User successfully created");
@@ -87,24 +77,28 @@ export async function updateUserBookmarks(req, res) {
                 bookmarkIds: userBookmarks,
             }
         })
-        
+
+        // Update Genre Interest
         const mediaGenre = media.genre
-        mediaGenre.forEach(async (genre) => {
+        const userGenreInterest = user.genreInterest
+        const updateGenreInterest = mediaGenre.map(async (genre) => {
+            console.log(genre)
+            console.log(userEmail)
             await prisma.user.update({
                 where: {
-                    genreInterest:{
-                        equals:{
-                            genre: genre
-                        }
-                    } 
+                    email: userEmail
                 },
                 data: {
-                    count: {
-                        increment: 1
+                    genreInterest: {
+                        set: {
+                            genre: genre,
+                            count: userGenreInterest[genre] ? userGenreInterest[genre] + 1 : 1
+                        }
                     }
                 }
             })
         })
+        await Promise.all(updateGenreInterest)
 
         console.log(media)
         console.log(user)
