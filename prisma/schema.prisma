@@ -23,28 +23,34 @@ model Media {
 }
 
 model User {
-  id            String          @id @default(auto()) @map("_id") @db.ObjectId
-  email         String          @unique
+  id            String        @id @default(auto()) @map("_id") @db.ObjectId
+  email         String        @unique
   password      String?
-  role          Role            @default(USER)
-  bookmarkId    Media           @relation(fields: [bookmarkIds], references: [id])
-  bookmarkIds   String[]        @db.ObjectId
-  genreInterest GenreInterest[]
+  role          Role          @default(USER)
+  bookmarkId    Media         @relation(fields: [bookmarkIds], references: [id])
+  bookmarkIds   String[]      @db.ObjectId
+  genreInterest GenreInterest
 }
 
 type GenreInterest {
-  genre Genre
-  count Int
+  Horror   Int @default(0)
+  Comedy   Int @default(0)
+  Action   Int @default(0)
+  Romance  Int @default(0)
+  SciFi    Int @default(0)
+  Thriller Int @default(0)
+  Crime    Int @default(0)
+  War      Int @default(0)
 }
 
 enum Genre {
   Horror
-  SciFi
-  Thriller
   Comedy
   Action
-  Crime
   Romance
+  SciFi
+  Thriller
+  Crime
   War
 }
 
