@@ -51,7 +51,7 @@ export async function updateUserBookmarks(req, res) {
     const userEmail = req.body.email
     const mediaId = req.body.mediaId
     try {
-        const user = await prisma.user.findFirst({
+        const user = await prisma.user.findUnique({
             where: {
                 email: userEmail
             },
@@ -116,7 +116,7 @@ export async function updateUserBookmarks2(req, res) {
 export async function getUserBookmarks(req, res) {
     const userEmail = req.query.email
     try {
-        const user = await prisma.user.findFirst({
+        const user = await prisma.user.findUnique({
             where: {
                 email: userEmail
             },
