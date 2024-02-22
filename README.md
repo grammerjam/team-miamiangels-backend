@@ -2,8 +2,14 @@
 
 Cinemate Backend is the server-side component of the Cinemate project, responsible for handling data storage, retrieval, and business logic.
 
+From Design
+
+<img width="1320" alt="Figma-ent-app" src="https://github.com/grammerjam/team-miamiangels-backend/assets/53446311/cd29df26-2a7c-4b83-a5a7-fe2fb7ff3a7d">
+
+To Website
 
 <img width="1851" alt="ent-app" src="https://github.com/grammerjam/team-miamiangels-backend/assets/53446311/bf3e9596-dd74-4a10-8eae-1c9a88e5acd8">
+
 
 
 ### Website Link
