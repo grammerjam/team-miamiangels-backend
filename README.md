@@ -71,7 +71,7 @@ Clone the project
 ```
 Go to the project directory
 ```bash
-  cd cd team-miamiangels-backend
+  cd team-miamiangels-backend
 ```
 Install dependencies
 ```bash
