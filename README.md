@@ -88,10 +88,10 @@ https://movie-web.app/browse/game
 
 ## Credit - Team MiamiAngels
 
-* Jose Facade - Full Stack Developer /Audio Engineer & Director | LinkedIn | GitHub
-* Alejandro Vecchio - Lead Developer  | LinkedIn | GitHub
-* Olivia Banks - Project Manager / Athlete | LinkedIn
-* Luis Perez - Full Stack Developer / Powerlifter | LinkedIn | GitHub
+[Jose Facade](https://www.linkedin.com/in/jfacade/) - Full Stack Developer / Audio Engineer & Director | [GitHub](https://github.com/jluiscool)
+[Alejandro Vecchio](https://www.linkedin.com/in/alejandro-vecchio/) - Lead Developer | [GitHub](https://github.com/aliv314)
+[Olivia Banks](https://www.linkedin.com/in/olivia-banks-/) - Project Manager / Athlete
+[Luis Perez](https://www.linkedin.com/in/lperezdev/) - Full Stack Developer / Powerlifter | [GitHub](https://github.com/LEPII)
 
 ## Acknowledgements
 
