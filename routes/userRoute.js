@@ -1,6 +1,6 @@
 import express from 'express';
 // import { getAllMedia, getAllMovies, getAllTVSeries } from "../controllers/mediaController.js";
-import { getUserInfo, createUser, updateUserBookmarks, getUserBookmarks } from '../controllers/userController.js';
+import { getUserInfo, createUser, updateUserBookmarks, getUserBookmarks, getUserTrending } from '../controllers/userController.js';
 const router = express.Router()
 
 router
@@ -13,4 +13,7 @@ router
     .put(updateUserBookmarks)
     .get(getUserBookmarks)
 
+router
+    .route('/trending')
+    .get(getUserTrending)
 export { router }
