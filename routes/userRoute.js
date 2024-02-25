@@ -10,7 +10,7 @@ router
 
 router
     .route("/bookmarks")
-    .put(updateUserBookmarks)
+    .patch(updateUserBookmarks)
     .get(getUserBookmarks)
 
 export { router }

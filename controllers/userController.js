@@ -58,62 +58,35 @@ export async function createUser(req, res) {
     }
 }
 
-export async function updateUserBookmarks(req, res) {
-    const userEmail = req.body.email
-    const mediaId = req.body.mediaId
-    try {
-        const user = await prisma.user.findUnique({
-            where: {
-                email: userEmail
-            },
-        })
-        const media = await prisma.media.findUnique({
-            where: {
-                id: mediaId
-            },
-        })
-        const userBookmarks = user.bookmarkIds
-        let indexOfBookmark = userBookmarks.indexOf(mediaId)
-        if (indexOfBookmark !== -1) {
-            userBookmarks.splice(indexOfBookmark, 1)
-        } else {
-            userBookmarks.push(mediaId)
-        }
-        await prisma.user.update({
-            where: {
-                email: userEmail
-            },
-            data: {
-                bookmarkIds: userBookmarks,
-            }
-        })
-
-        
-        res.status(200).json("Bookmarks updated successfully")
-    } catch (e) {
-        console.error(e);
-        res.status(500).json('An error occurred while fetching media records.');
-    } finally {
-        await prisma.$disconnect();
-    }
-}
-
-
-// export async function updateUserBookmarks2(req, res) {
+// export async function updateUserBookmarks(req, res) {
 //     const userEmail = req.body.email
-//     const userBookmarks = req.body.bookmarks
+//     const mediaId = req.body.mediaId
 //     try {
-//         const user = await prisma.user.update({
+//         const user = await prisma.user.findUnique({
+//             where: {
+//                 email: userEmail
+//             },
+//         })
+//         const media = await prisma.media.findUnique({
+//             where: {
+//                 id: mediaId
+//             },
+//         })
+//         const userBookmarks = user.bookmarkIds
+//         let indexOfBookmark = userBookmarks.indexOf(mediaId)
+//         if (indexOfBookmark !== -1) {
+//             userBookmarks.splice(indexOfBookmark, 1)
+//         } else {
+//             userBookmarks.push(mediaId)
+//         }
+//         await prisma.user.update({
 //             where: {
 //                 email: userEmail
 //             },
 //             data: {
-//                 bookmarks: userBookmarks
+//                 bookmarkIds: userBookmarks,
 //             }
 //         })
-//         if (!user) {
-//             res.status(404).json("No user found")
-//         }
 //         res.status(200).json("Bookmarks updated successfully")
 //     } catch (e) {
 //         console.error(e);
@@ -122,6 +95,31 @@ export async function updateUserBookmarks(req, res) {
 //         await prisma.$disconnect();
 //     }
 // }
+
+
+export async function updateUserBookmarks(req, res) {
+    const userEmail = req.body.email
+    const userBookmarks = req.body.bookmarks
+    try {
+        const user = await prisma.user.update({
+            where: {
+                email: userEmail
+            },
+            data: {
+                bookmarks: userBookmarks
+            }
+        })
+        if (!user) {
+            res.status(404).json("No user found")
+        }
+        res.status(200).json("Bookmarks updated successfully")
+    } catch (e) {
+        console.error(e);
+        res.status(500).json('An error occurred while fetching media records.');
+    } finally {
+        await prisma.$disconnect();
+    }
+}
 
 export async function getUserBookmarks(req, res) {
     const userEmail = req.query.email
