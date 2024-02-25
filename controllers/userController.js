@@ -12,7 +12,7 @@ export async function getUserInfo(req, res) {
         if (!user) {
             res.status(404).json("No such user found")
         }
-        console.log(user)
+        // console.log(user)
         res.json(user);
     } catch (e) {
         console.error(e);
@@ -122,7 +122,7 @@ export async function updateUserBookmarks(req, res) {
 }
 
 export async function getUserBookmarks(req, res) {
-    const userEmail = req.query.email
+    const userEmail = req.query.userEmail
     try {
         const user = await prisma.user.findUnique({
             where: {
