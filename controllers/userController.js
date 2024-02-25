@@ -106,7 +106,7 @@ export async function updateUserBookmarks(req, res) {
                 email: userEmail
             },
             data: {
-                bookmarks: userBookmarks
+                bookmarkIds: userBookmarks
             }
         })
         if (!user) {
