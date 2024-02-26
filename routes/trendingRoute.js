@@ -6,7 +6,5 @@ const router = express.Router()
 router
     .route('/')
     .get(getUserTrending)
-    .patch(updateInterest)
-
 
 export { router }

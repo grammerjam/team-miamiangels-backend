@@ -62,7 +62,7 @@ export async function updateInterest(req, res) {
     const interestObj = req.body.interestObj
 
     // obj = {
-    //    interest: 1,
+    //   interest: 1,
     //   genres: ["Action", "Adventure"]
     //  }
 
