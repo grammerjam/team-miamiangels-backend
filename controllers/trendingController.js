@@ -23,6 +23,22 @@ export async function getUserTrending(req, res) {
                 email: userEmail
             }
         })
+        // If there's no user, or if the user has no bookmarks, return 10 random media
+        if (!user || user.bookmarkIds.length === 0) {
+            let trending = []
+            let indexes = new Set()
+            for (let i = 0; i < 10; i++) {
+                let index = Math.floor(Math.random() * media.length)
+
+                while (indexes.has(index)) {
+                    index = Math.floor(Math.random() * media.length)
+                }
+
+                trending.push(media[index])
+            }
+
+            return res.json(trending.slice(0, 10))
+        }
 
         // Content Filtering Matrix Algo
         const userInterest = user.genreInterest

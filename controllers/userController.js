@@ -87,11 +87,11 @@ export async function updateUserBookmarks(req, res) {
                 bookmarkIds: userBookmarks,
             }
         })
-
+        
         // Update Genre Interest
         const mediaGenre = media.genre
-        const userGenreInterest = user.genreInterest
-        const updateGenreInterest = mediaGenre.map(async (genre) => {
+        const increment = indexOfBookmark === -1 ? 1 : -1
+        mediaGenre.map(async (genre) => {
             await prisma.user.update({
                 where: {
                     email: userEmail
@@ -100,7 +100,7 @@ export async function updateUserBookmarks(req, res) {
                     genreInterest: {
                         update: {
                             [genre]: {
-                                increment: 1
+                                increment: increment
                             }
                         }
                     }

@@ -1,5 +1,5 @@
 import express from 'express';
-import { getUserTrending, updateInterest } from '../controllers/trendingController.js';
+import { getUserTrending} from '../controllers/trendingController.js';
 const router = express.Router()
 
 
