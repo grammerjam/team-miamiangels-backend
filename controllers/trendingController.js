@@ -35,7 +35,7 @@ export async function getUserTrending(req, res) {
                 indexes.add(index)
                 trending.push(media[index])
             }
-            console.log(indexes.values())
+            
             return res.json(trending)
         }
 
