@@ -29,15 +29,14 @@ export async function getUserTrending(req, res) {
             let indexes = new Set()
             for (let i = 0; i < 10; i++) {
                 let index = Math.floor(Math.random() * media.length)
-                indexes.add(index)
                 while (indexes.has(index)) {
                     index = Math.floor(Math.random() * media.length)
                 }
-
+                indexes.add(index)
                 trending.push(media[index])
             }
-
-            return res.json(trending.slice(0, 10))
+            console.log(indexes.values())
+            return res.json(trending)
         }
 
         // Content Filtering Matrix Algo
