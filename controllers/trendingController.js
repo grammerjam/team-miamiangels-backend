@@ -29,7 +29,7 @@ export async function getUserTrending(req, res) {
             let indexes = new Set()
             for (let i = 0; i < 10; i++) {
                 let index = Math.floor(Math.random() * media.length)
-
+                indexes.add(index)
                 while (indexes.has(index)) {
                     index = Math.floor(Math.random() * media.length)
                 }
