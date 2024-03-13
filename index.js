@@ -11,8 +11,12 @@ const PORT = process.env.PORT || 10000
 
 const videoFileMap = {
     "alone": "videos/alone.mp4",
-    "generate-pass": "videos/generate-pass.mp4",
-    "get-post": "videos/get-post.mp4",
+    "airport": "videos/airport.mp4",
+    "forest": "videos/forest.mp4",
+    "winterDriving": "videos/winterDriving.mp4",
+    "butterflies": "videos/butterflies.mp4",
+    "fireBurning": "videos/fireBurning.mp4",
+    "zombie": "videos/zombie.mp4",
 }
 
 app.use(cors())
@@ -24,7 +28,6 @@ app.get('/', (req, res) => {
 })
 
 app.get("/videos/:filename", (req, res) => {
-    console.log('root file reached')
     const fileName = req.params.filename;
     const filePath = videoFileMap[fileName]
     if (!filePath) {
