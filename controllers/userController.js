@@ -118,11 +118,7 @@ export async function updateUserBookmarks(req, res) {
 }
 
 export async function getUserBookmarks(req, res) {
-<<<<<<< HEAD
-    const userEmail = req.query.email
-=======
     const userEmail = req.query.mail
->>>>>>> main
     try {
         const user = await prisma.user.findUnique({
             where: {
