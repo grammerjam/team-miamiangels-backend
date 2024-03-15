@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 app.get("/videos/:filename", (req, res) => {
     const fileName = req.params.filename;
     const filePath = videoFileMap[fileName]
-    if (!filePath) {
+    if (!filePath || !fileName) {
         return res.status(404).send("File not found")
     }
     //fetch stats
@@ -40,11 +40,14 @@ app.get("/videos/:filename", (req, res) => {
     //get range
     const range = req.headers.range
     //make sure we have range header
+    // console.log(range)
     if (range) {
         const parts = range.replace(/bytes=/, '').split('-')
+        // console.log(parts)
         const start = parseInt(parts[0], 10);
+        console.log("starting at" + start)
         const end = parts[1] ? parseInt(parts[1], 10) : fileSize - 1
-
+        console.log("ending at " + end)
         const chunksize = end - start + 1
         const file = fs.createReadStream(filePath, { start, end })
         const head = {
