@@ -23,7 +23,7 @@ function getMimeType(fileName) {
 
 export async function getVideoData(req, res) {
     const fileName = req.params.filename
-    console.log(fileName)
+    // console.log(fileName)
     const range = req.headers.range
     // const filePath = videoFileMap[fileName]
     // const filePath = "https://miamiangelsvideos.s3.amazonaws.com/alone_-_46637_720p.mp4"
@@ -46,7 +46,7 @@ export async function getVideoData(req, res) {
 
         stream.on('error', function error(err) {
             //continue to the next middlewares
-            console.log('i hit an error')
+            // console.log('i hit an error')
             return res.status(404).send(err)
         });
 
@@ -56,7 +56,7 @@ export async function getVideoData(req, res) {
         }
 
         if (range && parts[0] > 0) {
-            console.log('the range of this call is: ' + range)
+            // console.log('the range of this call is: ' + range)
             // const parts = range.replace(/bytes=/, '').split('-')
             // console.log("this is the parts: " + parts[0])
             const start = parseInt(parts[0], 10);
@@ -79,10 +79,10 @@ export async function getVideoData(req, res) {
 
             stream.pipe(res);
         } else {
-            console.log('no range set')
+            // console.log('no range set')
             res.set('Content-Type', getMimeType(videoKey));
             res.set('Content-Length', data.ContentLength);
-            console.log("this data length is: " + data.ContentLength)
+            // console.log("this data length is: " + data.ContentLength)
             res.set('Last-Modified', data.LastModified);
             res.set('ETag', data.ETag);
 
