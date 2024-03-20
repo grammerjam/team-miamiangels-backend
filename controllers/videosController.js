@@ -52,26 +52,35 @@ export async function getVideoData(req, res) {
             const end = parts[1] ? parseInt(parts[1], 10) : data.ContentLength - 1
             const chunksize = end - start + 1
 
-            res.set('Content-Type', getMimeType(videoKey));
-            res.set('Content-Length', chunksize);
-            res.set('Last-Modified', data.LastModified);
-            res.set('ETag', data.ETag);
-            res.set('Content-Range', `bytes ${start} - ${end}/${data.ContentLength}`)
+            const head = {
+                'Content-Type': getMimeType(videoKey),
+                'Content-Length': chunksize,
+                'Last-Modified': data.LastModified,
+                'ETag': data.ETag,
+                'Content-Range': `bytes ${start} - ${end}/${data.ContentLength}`
+            };
 
+            res.writeHead(206, head)
             stream.on('end', () => {
                 // console.log('Served by Amazon S3: ' + videoKey);
             });
             stream.pipe(res);
         } else {
-            res.set('Content-Type', getMimeType(videoKey));
-            res.set('Content-Length', data.ContentLength);
-            res.set('Last-Modified', data.LastModified);
-            res.set('ETag', data.ETag);
+            const head = {
+                'Content-Type': getMimeType(videoKey),
+                'Content-Length': data.ContentLength,
+                'Last-Modified': data.LastModified,
+                'ETag': data.ETag,
+            };
+            // res.set('Content-Type', getMimeType(videoKey));
+            // res.set('Content-Length', data.ContentLength);
+            // res.set('Last-Modified', data.LastModified);
+            // res.set('ETag', data.ETag);
 
             stream.on('end', () => {
                 // console.log('Served by Amazon S3: ' + videoKey);
             });
-
+            res.writeHead(200, head)
             stream.pipe(res);
         }
     })
