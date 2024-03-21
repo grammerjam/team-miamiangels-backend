@@ -47,15 +47,26 @@ export async function getAllTVSeries(req, res) {
 
 export async function getMediaInfo(req, res) {
     const mediaId = req.params.mediaId
+    // console.log(mediaId)
     if (!mediaId) {
         res.status(404).send("Media ID is invalid")
     }
+    const objectIdPattern = /^[0-9a-fA-F]{24}$/;
+
+    if (!objectIdPattern.test(mediaId)) {
+        // If the id does not match the pattern, return an error response
+        return res.status(400).send({ error: 'Malformed ObjectId' });
+    }
     try {
+        // console.log('im in the try!!!')
         const mediaItem = await prisma.media.findUnique({
             where: {
                 id: mediaId
             }
         })
+        if (!mediaItem) {
+            res.status(404).send("Media not found")
+        }
         res.json(mediaItem)
     } catch (e) {
         res.status(404).send(e)
