@@ -44,3 +44,22 @@ export async function getAllTVSeries(req, res) {
         await prisma.$disconnect();
     }
 }
+
+export async function getMediaInfo(req, res) {
+    const mediaId = req.params.mediaId
+    if (!mediaId) {
+        res.status(404).send("Media ID is invalid")
+    }
+    try {
+        const mediaItem = await prisma.media.findUnique({
+            where: {
+                id: mediaId
+            }
+        })
+        res.json(mediaItem)
+    } catch (e) {
+        res.status(404).send(e)
+    } finally {
+        await prisma.$disconnect();
+    }
+}

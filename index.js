@@ -6,6 +6,7 @@ import { router as mediaRoute } from "./routes/mediaRoute.js"
 import { router as userRoute } from './routes/userRoute.js'
 import { router as trendingRoute } from './routes/trendingRoute.js'
 import { router as videosRoute } from './routes/videosRoute.js'
+import { router as watchMoreRoute } from './routes/videosRoute.js'
 import AWS from 'aws-sdk';
 
 const app = express()
@@ -59,6 +60,7 @@ app.get('/', (req, res) => {
 app.use("/api/media", mediaRoute)
 app.use("/api/users", userRoute)
 app.use("/api/trending", trendingRoute)
+app.use("/api/watchMore", watchMoreRoute)
 app.use("/videos", videosRoute)
 
 app.listen(PORT, () => {
