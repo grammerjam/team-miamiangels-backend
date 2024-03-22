@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
-export function scoreMedia(genreInterest, genres) {
+function scoreMedia(genreInterest, genres) {
     let score = 0
     const n = genres.length
     const scoreMod = 3 / n // If a movie has 3 genres, it will have a modifier of 3, if 1 it will have a modifier of 1 

@@ -6,7 +6,7 @@ import { router as mediaRoute } from "./routes/mediaRoute.js"
 import { router as userRoute } from './routes/userRoute.js'
 import { router as trendingRoute } from './routes/trendingRoute.js'
 import { router as videosRoute } from './routes/videosRoute.js'
-import { router as watchMoreRoute } from './routes/videosRoute.js'
+import { router as watchMoreRoute } from './routes/watchMoreRoute.js'
 import AWS from 'aws-sdk';
 
 const app = express()
@@ -38,16 +38,6 @@ const PORT = process.env.PORT || 10000
 //         console.log("Success", data);
 //     }
 // });
-
-const videoFileMap = {
-    "alone": "videos/alone.mp4",
-    "airport": "videos/airport.mp4",
-    "forest": "videos/forest.mp4",
-    "winterDriving": "videos/winterDriving.mp4",
-    "butterflies": "videos/butterflies.mp4",
-    "fireBurning": "videos/fireBurning.mp4",
-    "zombie": "videos/zombie.mp4",
-}
 
 app.use(cors())
 app.use(express.json())
