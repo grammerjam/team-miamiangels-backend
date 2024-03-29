@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/grammerjam/team-miamiangels-backend#readme",
   "dependencies": {
+    "@clerk/clerk-sdk-node": "^4.13.11",
     "@prisma/client": "^5.9.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.1",
