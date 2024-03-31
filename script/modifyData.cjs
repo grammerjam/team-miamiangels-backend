@@ -1,5 +1,5 @@
 const fs = require('fs');
-const filePath = './data.json';
+const filePath = './new_entries.json';
 
 const categories = ["Movie", "TvSeries"]
 const ratings = ["E", "PG", "18+"];
