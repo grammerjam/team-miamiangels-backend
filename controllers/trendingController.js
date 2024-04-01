@@ -34,7 +34,7 @@ export async function getUserTrending(req, res) {
                     index = Math.floor(Math.random() * media.length)
                 }
 
-                trending.push(media[index])
+                trending.push({...media[index], score: 0})
             }
 
             return res.json(trending.slice(0, 10))
