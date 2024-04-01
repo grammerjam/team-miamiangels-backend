@@ -18,6 +18,9 @@ model Media {
   rating        String
   tpath         String?
   tpathTrending String?
+  description   String?
+  videoTitle    String?
+  videoUrl      String?
   genre         Genre[]
   user          User[]
 }
