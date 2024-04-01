@@ -32,7 +32,7 @@ Cinemate Backend is the server-side component of the Cinemate project, responsib
 ## Server Tech Stack
 
 - [Express](https://expressjs.com/)
-- [Clerk](https://docs.clerk.dev/))
+- [Clerk](https://docs.clerk.dev/)
 - [Cors](https://www.npmjs.com/package/cors)
 - [Prisma](https://www.prisma.io/)
 - [MongoDB](https://www.mongodb.com/)
