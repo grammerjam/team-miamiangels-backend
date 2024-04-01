@@ -37,7 +37,6 @@ Cinemate Backend is the server-side component of the Cinemate project, responsib
 - [Prisma](https://www.prisma.io/)
 - [MongoDB](https://www.mongodb.com/)
 - [Node.js](https://nodejs.org/)
-- [Express](https://expressjs.com/)
 - [Render](https://render.com/)
 
 ## Features
