@@ -32,6 +32,7 @@ Cinemate Backend is the server-side component of the Cinemate project, responsib
 ## Server Tech Stack
 
 - [Express](https://expressjs.com/)
+- [Clerk](https://docs.clerk.dev/))
 - [Cors](https://www.npmjs.com/package/cors)
 - [Prisma](https://www.prisma.io/)
 - [MongoDB](https://www.mongodb.com/)
@@ -40,6 +41,7 @@ Cinemate Backend is the server-side component of the Cinemate project, responsib
 ## Features
 
 - User Authentication and Authorization
+- Configurations for the handling of Users and the User's Media Content
 - Data Storage and Retrieval with MongoDB and Prisma
 - Environment Variable Configuration
 - Server-side Routing and Middleware with Express
@@ -47,26 +49,45 @@ Cinemate Backend is the server-side component of the Cinemate project, responsib
 
 ## Usage/Examples
 
-```prisma
+```trendingController.js
 
-model User {
-  id            String        @id @default(auto()) @map("_id") @db.ObjectId
-  email         String        @unique
-  password      String?
-  role          Role          @default(USER)
-  bookmarkId    Media         @relation(fields: [bookmarkIds], references: [id])
-  bookmarkIds   String[]      @db.ObjectId
-  genreInterest GenreInterest
-}
+        // If there's no user, or if the user has no bookmarks, return 10 random media
+
+  if (!user || user.bookmarkIds.length === 0) {
+    let trending = []
+    let indexes = new Set()
+    for (let i = 0; i < 10; i++) {
+      let index = Math.floor(Math.random() * media.length)
+
+      while (indexes.has(index)) {
+        index = Math.floor(Math.random() * media.length)
+      }
+
+      trending.push({...media[index], score: 0})
+      }
+
+    return res.json(trending.slice(0, 10))
+  }
+
 ```
+
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
 
-
 `DATABASE_URL`
 
 `PORT`
+
+`AWS_ACCESS_KEY_ID`
+
+`AWS_SECRET_ACCESS_KEY`
+
+`BUCKET_NAME`
+
+`BUCKET_REGION`
+
+`CLERK_SECRET_KEY`
 
 ## Run Locally
 
